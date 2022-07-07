@@ -29,7 +29,7 @@ int main()
 	while (inf.good() && !inf.eof() && i < size)
 	{
 		//if your file has double / int or other types just change short to that one 
-		//you have to chage line 12 (the array definition and line 25 for the new statement
+		//you have to chage line 12 (the array definition) and line 25 for the new statement and line 22 for calculation of number of items in the file
 		
 		inf.read((char*)&tmp, sizeof(short));
 		indata[i++] = tmp ;	
