@@ -12,8 +12,7 @@ int main()
 	double* indata;
 	int i = 0;
 	short tmp = 0;
-	double coef1 = 171.868;
-	double coef2 = 342.674;
+	
 
 	ifstream inf(infilename, std::ifstream::in | std::ifstream::binary);
 	if (inf.good())
@@ -31,7 +30,7 @@ int main()
 		indata[i++] = tmp ;	
 		cout << tmp << "\t";
 	}
-
+	inf.close();
     cout << "\n End of the values!\n";
 	return 0;
 }
