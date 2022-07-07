@@ -7,9 +7,10 @@ using namespace std;
 
 int main()
 {
-	const char* infilename="data\\ESP_TESTCPC001(HI).H";
+	//you can set the file path here c:\\test\\myfile.t" 
+	const char* infilename="yourfile.tmp";
 	int size = 0;
-	double* indata;
+	short* indata;
 	int i = 0;
 	short tmp = 0;
 	
@@ -21,11 +22,14 @@ int main()
 		size = (int)inf.tellg() / 2;		
 	}
 	cout << "this file has " << size << " values in it.\n Enter any key to see the values!\n";
+	//added just for pause 
 	getchar();
-	indata = new double[size];
+	indata = new short[size];
 	inf.seekg(0);
 	while (inf.good() && !inf.eof() && i < size)
 	{
+		//if your file has double / int or other types just change short to that one 
+		//you have to chage line 12 (the array definition and line 25 for the new statement
 		inf.read((char*)&tmp, sizeof(short));
 		indata[i++] = tmp ;	
 		cout << tmp << "\t";
