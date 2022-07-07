@@ -1,0 +1,3 @@
+# ReadBinary
+This small code will help you to read binary files which contain short values. 
+If you need to read other types simply change short to the desired type like double/int/...
